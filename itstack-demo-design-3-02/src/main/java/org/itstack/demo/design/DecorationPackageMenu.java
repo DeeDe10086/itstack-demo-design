@@ -6,6 +6,7 @@ import java.util.List;
 
 /**
  * 装修包
+ * 组装构需要的内部逻辑，（大白话就是，可能会重复使用的逻辑代码，抽象出来）
  */
 public class DecorationPackageMenu implements IMenu {
 
@@ -23,30 +24,35 @@ public class DecorationPackageMenu implements IMenu {
         this.grade = grade;
     }
 
+    @Override
     public IMenu appendCeiling(Matter matter) {
         list.add(matter);
         price = price.add(area.multiply(new BigDecimal("0.2")).multiply(matter.price()));
         return this;
     }
 
+    @Override
     public IMenu appendCoat(Matter matter) {
         list.add(matter);
         price = price.add(area.multiply(new BigDecimal("1.4")).multiply(matter.price()));
         return this;
     }
 
+    @Override
     public IMenu appendFloor(Matter matter) {
         list.add(matter);
         price = price.add(area.multiply(matter.price()));
         return this;
     }
 
+    @Override
     public IMenu appendTile(Matter matter) {
         list.add(matter);
         price = price.add(area.multiply(matter.price()));
         return this;
     }
 
+    @Override
     public String getDetail() {
 
         StringBuilder detail = new StringBuilder("\r\n-------------------------------------------------------\r\n" +

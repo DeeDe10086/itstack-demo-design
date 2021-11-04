@@ -8,6 +8,9 @@ import org.itstack.demo.design.floor.ShengXiangFloor;
 import org.itstack.demo.design.tile.DongPengTile;
 import org.itstack.demo.design.tile.MarcoPoloTile;
 
+/**
+ * 建造者，负责具体的业务
+ */
 public class Builder {
 
     public IMenu levelOne(Double area) {

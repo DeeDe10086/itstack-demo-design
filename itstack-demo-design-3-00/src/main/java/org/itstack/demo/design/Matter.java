@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 /**
  * 装修物料
+ * 对具体数据的抽象
  */
 public interface Matter {
 
